@@ -37,10 +37,61 @@ layout: center
                 <option>Приключения</option>
             </select>
         </label>
-        <input class="w-full border border-gray-500 rounded px-2" type="text" placeholder="Ваша любимая книга" />
+        <input class="w-full border border-gray-500 rounded px-2" type="text" value="" placeholder="Ваша любимая книга" />
     </form>
 </div>
 </v-click>
+
+---
+layout: center
+---
+
+<h3> Как на сайтах пользователи заполняют данные </h3>
+<v-click>
+<div class="w-full mt-3">
+    <form class="w-full flex flex-col gap-3">
+        <h4>Оставьте отзыв о нашем сервисе</h4>
+        <input class="w-1/2 border border-gray-500 rounded px-2" type="text" placeholder="Ваше имя" />
+        <input class="w-1/2 border border-gray-500 rounded px-2" type="text" placeholder="Ваш номер телефона" />
+        <div class="w-2/3 flex flex-wrap gap-3">
+            <label class="w-full">Понравилось ли Вам наше обслуживание?</label>
+            <button type="button">Да</button><button type="button">Нет</button>
+        </div>
+        <textarea class="w-full border border-gray-500 rounded px-2" value="" placeholder="Оставьте свои пожелания">
+        </textarea>
+    </form>
+</div>
+</v-click>
+
+<style>
+    button {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 3px 18px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        transition: background-color 0.2s;
+    }
+    button:hover {
+        background-color: #e0e0e0;
+    }
+</style>
+
+---
+layout: center
+---
+
+### Для чего такое может использоваться в Telegram-ботах?
+
+<v-clicks>
+
+- Анкеты, сбор личных данных
+- Опросы, тесты
+- Сбор отзывов
+- Обратная связь, возможность для публики писать сообщения администраторам
+- Для того, чтоб дать возможность администратору вносить данные в БД
+
+</v-clicks>
 
 ---
 layout: center
@@ -70,6 +121,7 @@ layoutClass: gap-16
 <v-click at=1> <li> Имя </li> </v-click>
 <v-click at=4> <li> Возраст </li> </v-click>
 <v-click at=7> <li> Пол </li> </v-click>
+<v-click at=10> <li> Любимый жанр </li> </v-click>
 </ul>
 
 ::right::
@@ -83,6 +135,8 @@ layoutClass: gap-16
   <v-click at=6><li>25 </li></v-click>
   <v-click at=8><li>Ваш пол? </li></v-click>
   <v-click at=9><li>Мужской</li></v-click>
+  <v-click at=11><li>Ваш любимый жанр книг? </li></v-click>
+  <v-click at=12><li>Фантастика</li></v-click>
 </ul>
 
 <style>
