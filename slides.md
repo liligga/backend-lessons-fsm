@@ -150,3 +150,90 @@ layoutClass: gap-16
         text-align: right;
     }
 </style>
+
+---
+
+## Вопросы для проверки
+
+<!-- - для чего диалоги в тг
+- какой механизм используется для диалогов в айограм
+- что такое states group
+- как переключить состояние
+- как написать декоратор для обработчика ответа пользователя при определенном состоянии
+- как сохранить ответ пользователя во время диалога
+- как получить все сохраненные во время диалога ответы пользователя -->
+
+
+<Questions 
+    :questions="[
+        {
+            q: 'Для чего используются диалоги в Telegram?',
+            a: [
+                'Для сбора информации',
+                'Для общения',
+                'Не знаю'
+            ],
+            correct: 0
+        },
+        {
+            q: 'Какой механизм используются для диалогов в Aiogram?',
+            a: [
+                'Модульная архитектура',
+                'Dialogue',
+                'FSM - Finite State Machine',
+                'Router',
+                'Не знаю'
+            ],
+            correct: 2
+        },
+        {
+            q: 'Что такое States Group?',
+            a: [
+                'Модульная архитектура',
+                'Специальный роутер',
+                'Класс для хранения состояний в виде полей',
+                'Не знаю'
+            ],
+            correct: 2
+        },
+        {
+            q: 'Как переключить состояние? ',
+            a: [
+                'state.set(Dialogue.user_name)',
+                'state.set_state(Dialogue.user_name)',
+                'Dialogue.user_name.set()'
+            ],
+            correct: 1
+        },
+        {
+            q: 'Как написать декоратор для обработчика ответа пользователя при определенном состоянии? Например \'Dialogue.user_name?\'',
+            a: [
+                '@router.message(Dialogue.user_name?)',
+                '@router.message(Dialogue.user_name)',
+                '@router.message(state=Dialogue.user_name)',
+                '@router.message()'
+            ],
+            correct: 1
+        },
+        {
+            q: 'Как сохранить ответ пользователя во время диалога?',
+            a: [
+                'Dialogue.user_name = message',
+                'state.set(Dialogue.user_name = message)',
+                'state.update_data(user_name=message.text)',
+                'user_name = message.text'
+            ],
+            correct: 2
+        },
+        {
+            q: 'Как получить все сохраненные во время диалога ответы пользователя?',
+            a: [
+                'Dialogue.user_name',
+                'state.get(Dialogue.user_name)',
+                'state.get_data()',
+                'message.text'
+            ],
+            correct: 2
+        }
+    ]"
+/>
